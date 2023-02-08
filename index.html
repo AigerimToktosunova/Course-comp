@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <title>comp</title>
+</head>
+<body>
+    <!-- ............................START  HEADER................................... -->
+    <header>
+        <div class="logo">Компьютер нолдон</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="" class="active">Башкы бет</a>
+                </li>
+                <li>
+                    <a href="">Окуунун программасы</a>
+                </li>
+                <li>
+                    <a href="">Биз жонундо</a>
+                </li>
+                <li>
+                    <a href="">Байланыш номерлер</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+    
+     <!-- ............................START SECTION ................................. -->
+     <section>
+       <div class="container">
+             <h1> Компьютер менен иштоонуу, <br>нолдон баштап уйронунуз! </h1>
+
+             <div class="info">
+                <p><i class="fas fa-laptop"></i>Сабак 5 видеодон турат</p>
+                <p><i class="fas fa-phone"></i>Убактысы 5м - 10мунотторго чейин</p>
+                <p><i class="fas fa-question mark"></i>Кимдер учун?   </p>
+                        <span>Балдар мектеп жаштагы</span>
+                        <span>Чондор учун</span>
+                        <span>Пенсионерлер учун</span>
+             </div>
+       </div>
+     </section>
+
+     <!-- ............................START ASIDE................................. -->
+
+     <aside>
+        <div class="accordion-aside">
+            <div class="accordion">
+                 <h2>Окуунун программасы</h2>
+                 <hr>
+                 <div class="container">
+                    <div class="label">Компьютер менен танышуу</div>
+                    <div class="content">
+                        <p>жандыруу</p>
+                        <p>OC турлору</p>
+                        <p>пуск-кнопкасы менен танышуу</p>
+                        <p>папка ачуу, очуруу</p>
+                        <p>(переменование) документтердин атын озгортуу</p>
+                    </div>
+                 </div>
+                 <div class="container">
+                    <div class="label">Антивирус менен танышуу</div>
+                    <div class="content">
+                        <p>кочуруу</p>
+                        <p>coggle менен иштоо</p>
+                    </div>
+                 </div>
+                 <div class="container">
+                    <div class="label">Microsoft Word менен танышуу</div>
+                    <div class="content">
+                        <p>текст жазуу, текст менен иштоо</p>
+                        <p>клавиатура менен тез жазуу</p>
+                        <p>документтер менен иштоо, абцазы, пунктации</p>
+                        <p>очуруу, сактоо, номер коюу, кочуруу</p>
+                        <p>тексттерге сурот койу</p>
+                    </div>
+                 </div>
+                 <div class="container">
+                    <div class="label">Microsoft Point менен танышуу</div>
+                    <div class="content">
+                        <p>презентация жасоо</p>
+                        <p>диограмма кою</p>
+                        <p>даяр шаблондор менен иштоо</p>
+                    </div>
+                 </div>
+                 <div class="container">
+                    <div class="label">Microsoft Excel менен танышуу</div>
+                    <div class="content">
+                        <p>таблица тузуу</p>
+                        <p>функциялары менен танышуу</p>
+                        <p>формат кылуу жана дизайндер менен иштоо</p>
+                        <p>диограмма менен иштоо</p>
+                    </div>
+                 </div>
+            </div>
+            
+        </div>
+     </aside>
+
+
+  <script>
+    const accordion = document.getElementsByClassName('container');
+     for (i=0; i<accordion.length; i++) {
+        accordion[i].addEventListener('click', function () {
+            this.classList.toggle('active')
+        })
+     }
+  </script>
+
+<!-- ............................START BOX................................. -->
+<div class="box">
+    <div class="row-left">
+      <img src="./img/okuu1.png" alt="">
+      <p> Окуу кандай отот?</p>
+    </div>
+    <div class="row-right">
+        <img src="./img/okuu5.png" alt="">
+        <p> Окуу онлайн каалаган убактынызда коро аласыз!</p>
+      </div>
+      <div class="row-left">
+        <img src="./img/jkuu2.png" alt="">
+        <p> Видео сизде туболук калат</p>
+      </div>
+      <div class="row-right">
+        <img src="./img/okuu3.png" alt="">
+        <p>Видео телеграмм аркылуу жиберилет</p>
+      </div>
+      <div class="row-left">
+        <img src="./img/okuu4.png" alt="">
+        <p> Суроолорунуз болсо бизге байланышыныз, жазыныз кайтарым байланыш болот</p>
+      </div>
+</div>
+
+<!-- ............................START FOUNDER................................. -->
+<div class="founder">
+    <h1>Мен жонундо</h1>
+    <div class="container">
+      <img src="./img/aigetim.png" alt="">
+      <div class="text-founder">
+          <p>Мен Токтосунова Айгерим бир баланын апасы жана суйукту жар 
+            2013-2014 жылдары мектеп убагында райондук облустук 
+            информатика сабагына катышып журуп компьютер менен
+            иштоону мыкты оздоштургом Азыркы учурда IT адистигинде алектенип келем.<br>
+            Суроолор коп келет "компьютер кантип жандырам?", "текстти очуруп алдым", 
+            "почта ачышым керек", "распечатка кылышым керек" - ушуга окшогон 
+            жонокой суроолор ото коп беришет. <br> Ошондуктан бул курсту "Компьютер
+            нолдон" ачууну тура кордум. Бул курста компбютер менен танышып
+            андагы программалар менен иштегенди уйроносуздор.
+             </p>
+      </div>
+    </div>
+</div>
+
+
+<!-- ............................START FOOTER................................. -->
+
+    <footer>
+      <div class="container">
+         <div class="row">
+
+            <div class="col-md-4">
+                 <h3>Компьютер нолдон</h3>
+                 <p>Мы предлагаем такие основные направления
+                     курсов компьютерной грамотности, как: ... 
+                     Программный ремонт персонального компьютера;
+                 </p>
+            </div>
+            <div class="col-md-4">
+               <h3>Байланыш</h3>
+               <ul>
+                <li>Телефон: 0771357635 </li>
+                <li>Email: aigerimdev01@gmail.com</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Интернет тармагы</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fas fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fas fa-telegram"></i></a></li>
+                </ul>
+            </div>
+
+         </div>
+      </div>
+    </footer>
+
+     
+</body>
+</html>

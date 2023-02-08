@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --beige-color: #f2d1d1;
+    --white-color: #fefefe;
+    --pink-color: #ff33ff;
+    --blue-color: #252439;
+}
+
+body {
+    background-color: var(--beige-color);
+}
+/* ............................start header....................................... */
+header {
+    width: 100%;
+    height: 80px;
+    background: var(--pink-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white-color);
+    font-style: italic;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: var(--white-color);
+    font-size: 17px;
+    padding: 8px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+     color: var(--blue-color);
+     background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+    color: var(--blue-color);
+    background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding:  0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding:  0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+   .hamburger {
+    display: block;
+    cursor: pointer;
+   }
+   .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: var(--white-color);
+    margin: 6px 0;
+   } 
+   .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vh;
+    background: var(--pink-color);
+    transition:  0.2s;
+    overflow: hidden;
+   }
+   .nav-bar.active {
+    height: 450px;
+   }
+   .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin:  80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+   }
+   .nav-bar.active ul {
+    opacity: 1;
+   }
+   .nav-bar ul li a {
+    margin-bottom: 12px;
+   }
+
+}
+/* ............................end header....................................... */
+
+/* ............................start section....................................... */
+
+section {
+    background-image: url(../comp/img/imgFon.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: calc(100vh - 72px);
+}
+
+section .container {
+    padding-left: 35px;
+    padding-top: 20px;
+}
+
+section .container h1 {
+    font-size: 45px;
+    color: var(--pink-color);
+    font-weight: 700;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1320px) {
+    section .container h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    section .container h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    section .container h1 {
+        font-size: 24px;
+    }
+}
+
+section .info {
+    padding-top: 22px; color: #330033;
+}
+section .info p {
+    font-size: 23px;
+    line-height: 40px;
+}
+
+section .info  span {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px 35px;
+    display: inline-block;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 2px solid  var(--pink-color);
+}
+
+section .info  i {
+    width: 20px;
+    height: 25px;
+    color: var(--pink-color);
+   margin-right: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+   section .info span {
+    display: block;
+    text-align: start;
+    justify-content: start;
+    border-left: 2px solid  var(--pink-color);
+    border-bottom: none;
+   }
+}
+/* ............................end section...................................... */
+
+/* ...........................start aside....................................... */
+
+aside {
+    width: 100%;
+    height: 480px;
+    border-top: 1px solid var(--pink-color);
+}
+
+h2 {
+    text-align: center;
+}
+
+.accordion {
+    width: 1200px;
+    margin: 40px auto;
+    color: var(--blue-color);
+    background-color: var(--white-color);
+    padding: 35px 35px;
+    box-shadow: 10px 20px 12px 23px pink;
+}
+
+.accordion .container {
+    position: relative;
+    margin: 10px 10px;
+}
+
+.accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 25px;
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
+.accordion .label::before {
+    content: "+";
+    color: var(--blue-color);
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 25px;
+    transform: translateY(-50%);
+}
+
+.accordion .content {
+    position: relative;
+    background: var(--white-color);
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 900px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.accordion .content p {
+   line-height: 25px;
+}
+.accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid var(--pink-color);
+}
+ 
+.accordion .container.active .content {
+    height: 130px;
+    width: 600px;
+}
+
+.accordion .container.active .label::before {
+    content: "-";
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 1320px) {
+    .accordion {
+        width: 600px;
+    }
+    .accordion .label {
+        font-size: 20px;
+    }
+    .accordion .label::before {
+        font-size: 20px;
+    }
+    .accordion .content {
+        width: 550px;
+        font-size: 17px;
+    }
+    .accordion .content p {
+        line-height: 20px;
+    }
+    .accordion .container.active .content {
+        height: 95px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .accordion {
+        width: 470px;
+    }
+    .accordion .label {
+        font-size: 16px;
+    }
+    .accordion .label::before {
+        font-size: 16px;
+    }
+    .accordion .content {
+        width: 420px;
+        font-size: 14px;
+    }
+    .accordion .content p {
+        line-height: 16px;
+    }
+    .accordion .container.active .content {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .accordion {
+        width: 350px;
+    }
+    .accordion .label {
+        font-size: 14px;
+    }
+    .accordion .label::before {
+        font-size: 14px;
+    }
+    .accordion .content {
+        width: 250px;
+        font-size: 10px;
+    }
+    .accordion .content p {
+        line-height: 14px;
+    }
+    .accordion .container.active .content {
+        width: 200px;
+    }
+}
+
+/* ............................start box....................................... */
+
+.box {
+    margin: 20px 35px;
+    padding-bottom: 25px;
+}
+
+.box .row-left{
+    padding-left: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.box .row-left img,  .row-right img {
+    width: 110px;
+    height: 130px;
+}
+
+.box .row-left p, .row-right p {
+    font-size: 26px;
+    font-style: italic;
+    text-shadow: -10px -10px 5px #ff33ff;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.box .row-right {
+    padding-right: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        margin: 0 10px;
+    }
+    .box .row-left, .box .row-right {
+        padding: 0  20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box .row-left p, .row-right p {
+        font-size: 18px;
+        font-weight: 200;
+        padding: 0px auto;
+    }
+}
+/* ............................start fonuder....................................... */
+
+.founder {
+  padding-bottom: 20px;
+}
+
+.founder h1 {
+   font-weight: 400;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.founder .container {
+   padding: 20px 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.founder .container img {
+   width: 270px;
+   height: 250px;
+   border-radius: 8%;
+}
+
+.founder .text-founder{
+    max-width: 670px;
+    font-size: 18px;
+    color: var(--blue-color);
+    line-height: 28px;
+}
+
+@media only screen and (max-width: 900px) {
+    .founder .container img {
+        width: 220px;
+        height: 190px;
+    }
+    .founder .text-founder {
+        max-width: 550px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .founder .container {
+       display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+    .founder .text-founder {
+        max-width: 400px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+}
+
+/* ............................start footer....................................... */
+
+footer {
+    color: var(--blue-color);
+    padding: 30px 0;
+    font-weight: bold;
+}
+
+footer .container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-4 {
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    color: var(--pink-color);
+    font-weight: 400;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: var(--pink-color);
+    font-size: 30px;
+}
+
+@media(max-width: 991px) {
+    .col-md-4 {
+        flex:  0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media(max-width: 767px) {
+    .col-md-4 {
+        flex:  0 0 100%;
+        max-width: 100%;
+    }
+}
